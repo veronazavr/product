@@ -68,11 +68,12 @@ class ProductManagerTest {
 
     @Test
     void shouldFindSmartphoneIfExistTwoProduct() {
-        String text = "Manufacturer2";
 
-        Product[] expected = new Product[]{smartphone2, smartphone3};
-        Product[] actual = manager.searchBy(text);
-        assertArrayEquals(expected, actual);
+            String text = "Smartphone name";
+
+            Product[] expected = new Product[]{smartphone1, smartphone2};
+            Product[] actual = manager.searchBy(text);
+            assertArrayEquals(expected, actual);
+        }
+
     }
-
-}
